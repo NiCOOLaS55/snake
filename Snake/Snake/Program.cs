@@ -22,6 +22,23 @@ namespace Snake
             Point p4 = new Point(5, 1, '$');
             p4.Draw();
 
+            List<char> symlist = new List<char>
+            {
+                '*',
+                '#',
+                '№',
+                '$'
+            };
+
+            List<Point> plist = new List<Point>
+            {
+                p1,
+                p2,
+                p3,
+                p4
+            };
+
+
             Console.ReadLine();
         }
     }

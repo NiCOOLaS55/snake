@@ -16,7 +16,11 @@ namespace Snake
             Point p2 = new Point(4, 5, '#');
             p2.Draw();
 
-           /*sdsg*/
+            HorizontalLines Hline = new HorizontalLines(5, 10, 8, '-');
+            Hline.Draw();
+
+            VerticalLines Vline = new VerticalLines(5, 10, 8, '|');
+            Vline.Draw();
 
             Console.ReadLine();
         }

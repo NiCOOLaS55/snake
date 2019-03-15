@@ -6,28 +6,27 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    class HorizontalLines
+    class VerticalLines
     {
         List<Point> plist;
 
-        public HorizontalLines(int xLeft, int xRight, int y, char sym)
+        public VerticalLines(int yUp, int yDown, int x, char sym)
         {
             plist = new List<Point>();
-            for (int x = xLeft; x <= xRight; x++)
+            for (int y = yUp; y <= yDown; y++)
             {
                 Point p = new Point(x, y, sym);
                 plist.Add(p);
             }
         }
-            public void Draw()
+        public void Draw()
+        {
+            foreach (Point p in plist)
             {
-                foreach(Point p in plist)
-                {
-                    p.Draw();
-                }
+                p.Draw();
             }
-
         }
-        
-    }
 
+
+    }
+}

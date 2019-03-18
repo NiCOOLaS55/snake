@@ -14,10 +14,10 @@ namespace Snake
             Console.SetBufferSize( 80, 25 );
             /* рисуем рамку окна консоли*/
 
-            HorizontalLines HUpline = new HorizontalLines(0, 78, 0, '*');
-            HorizontalLines HDownline = new HorizontalLines(0, 78, 24, '*');
-            VerticalLines VLeftline = new VerticalLines(0, 24, 0, '*');
-            VerticalLines VRightline = new VerticalLines(0, 24, 78, '*');
+            HorizontalLines HUpline = new HorizontalLines(0, 78, 0, '+');
+            HorizontalLines HDownline = new HorizontalLines(0, 78, 24, '+');
+            VerticalLines VLeftline = new VerticalLines(0, 24, 0, '+');
+            VerticalLines VRightline = new VerticalLines(0, 24, 78, '+');
             HUpline.Draw();
             HDownline.Draw();
             VLeftline.Draw();
@@ -27,7 +27,10 @@ namespace Snake
             Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Draw();
-                             
+            snake.Move();
+            /*Thread.Sleep(300);*/
+
+                
         }
     }
 }
